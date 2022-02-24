@@ -1,0 +1,37 @@
+<div class="container" style="margin-top: 15px;">
+	
+	<!-- Resultados (Listado o mensaje de error) -->
+	<div class="justify-content-center">
+		<div class="row" *ngIf="results">
+			<div class="col-md-6 col-lg-6" *ngFor="let model of results" style="padding-right: 0">
+				<div class="card m-1" style="background-color:#D5D8DC; border-radius: 10px;">
+					<div class="card-body">
+						<h4 class="card-title">
+							<a [routerLink]="" (click)="redireccionToFrutas(model)">{{model.nombre}}</a>
+						</h4>
+						<p class="card-text">
+							<!-- Recurso de Tipo:
+							<b> {{model.type}}</b> -->
+							Ciudad:
+							<b> {{model.ciudad}}</b>
+							<br> Número de Dosis Aplicadas:
+							<b>{{model.dosis_aplicadas}}</b>
+						</p>
+						<a *ngIf="editorCheck" [routerLink]="" (click)="eliminarFruta(model)">
+							<i class="icon-remove-sign"></i>Eliminar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div *ngIf="!results && iniciado" class="alert alert-success" role="alert">
+		<h4 class="alert-heading">No se ha encontrado el recurso.</h4>
+		<p>No se ha encontrado recurso con los parametros de busqueda ingresados.</p>
+		<hr>
+		<p class="mb-0">Modificar los parametros para llegar a la conclusión deseada.</p>
+	</div>
+
+
+</div>

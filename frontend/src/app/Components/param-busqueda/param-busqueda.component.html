@@ -1,0 +1,64 @@
+
+<button type="button" class="btn btn-primary align-items-center" data-toggle="modal" data-target=".modal-busqueda">Realizar Consulta</button>
+
+<div class="modal fade modal-busqueda" #consultaModal tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+
+		<div class="modal-content" style="background-color: #D1F1F7;">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Parametros de Consulta</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form> 
+					<div class="form-group">
+						<label for="inColores">Estado de Vacunación</label>
+						<!-- <select name="colores" class="form-control" id="inColores" [(ngModel)]="status_vacunacion">
+							<option ></option>
+							<option >Vacunación Completa</option>
+  							<option >Vacunación Incompleta</option>
+  							<option >Sin Vacunar</option>
+						</select> -->
+						<input type="text" class="form-control" [(ngModel)]="status_vacunacion" name="colores" id="inColores" placeholder="Estado de Vacunación">
+						<small id="smColores" class="form-text text-muted">Ejemplo: Vacunación Completa, Vacunación Incompleta y Sin Vacunar.</small>
+					</div> 
+
+					<div class="form-group">
+						<label for="inMineral">Vacuna</label>
+						<!-- <select name="mineral" class="form-control" id="inMineral" [(ngModel)]="vacuna">
+							<option ></option>
+							<option >Astrazeneca</option>
+  							<option >Sinovac</option>
+  							<option >Pfizer</option>
+						</select> -->
+						<input type="text" class="form-control" [(ngModel)]="vacuna" name="mineral" id="inMineral" placeholder="Vacuna">
+						<small id="smMineral" class="form-text text-muted">Nombre de la vacuna. Ejemplo: Jhonson & Jhonson o Pfizer BioNTech</small>
+					</div> 
+
+					<div class="form-group">
+						<label for="insabor">Número de Dosis Aplicadas</label>
+						<input type="number" min="0" max="2" class="form-control" [(ngModel)]="dosis_aplicadas" name="sabor" id="insabor" placeholder="Número de Dosis Aplicadas">
+						<small id="smsabor" class="form-text text-muted">El número de las dosis que tiene aplicadas.</small>
+					</div>
+
+					<div class="form-group">
+						<label for="inregion">Ciudad</label>
+						<input type="text" class="form-control" [(ngModel)]="ciudad" name="region" id="inregion" placeholder="Ciudad">
+						<small id="smregion" class="form-text text-muted">La ciudad a la que pertenece. </small>
+					</div>
+
+					<div class="form-group">
+						<label for="invitamina">Enfermedad Crónica</label>
+						<input type="text" class="form-control" [(ngModel)]="enfermedad" name="vitamina" id="invitamina" placeholder="Enfermedad Crónica">
+						<small id="smvitamina" class="form-text text-muted">El nombre de la enfermedad que padece.</small>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" (click)="consulta()" >Consultar</button>
+			</div>
+		</div>
+	</div>
+</div>

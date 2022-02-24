@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:3030/vacuncacion/data#"
+     xml:base="http://localhost:3030/vacuncacion/data"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:data="http://localhost:3030/vacuncacion/data#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:data1="http://localhost:3030/vacunacion/data#">
+    <owl:Ontology rdf:about="http://localhost:3030/vacunacion/data">
+        <owl:versionIRI rdf:resource="http://localhost:3030/vacunacion/data"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#se_aplica -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:3030/vacunacion/data#se_aplica">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Persona"/>
+        <rdfs:range rdf:resource="http://localhost:3030/vacunacion/data#Vacuna"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#tiene_Enfermedad_Cronica -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:3030/vacunacion/data#tiene_Enfermedad_Cronica">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Persona"/>
+        <rdfs:range rdf:resource="http://localhost:3030/vacunacion/data#Enfermedad_Cronica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#CantidadVacunasDisponibles -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/vacunacion/data#CantidadVacunasDisponibles">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Vacuna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#NroDosisAplicadas -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/vacunacion/data#NroDosisAplicadas">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#StatusVacunacion -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/vacunacion/data#StatusVacunacion">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#deCiudad -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/vacunacion/data#deCiudad">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#descripcionVacuna -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/vacunacion/data#descripcionVacuna">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Vacuna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#nombreEnfermedadCronica -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/vacunacion/data#nombreEnfermedadCronica">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Enfermedad_Cronica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#nombrePersona -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/vacunacion/data#nombrePersona">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#nombreVacuna -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/vacunacion/data#nombreVacuna">
+        <rdfs:domain rdf:resource="http://localhost:3030/vacunacion/data#Vacuna"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Enfermedad_Cronica -->
+
+    <owl:Class rdf:about="http://localhost:3030/vacunacion/data#Enfermedad_Cronica"/>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Hombre -->
+
+    <owl:Class rdf:about="http://localhost:3030/vacunacion/data#Hombre">
+        <rdfs:subClassOf rdf:resource="http://localhost:3030/vacunacion/data#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Mujer -->
+
+    <owl:Class rdf:about="http://localhost:3030/vacunacion/data#Mujer">
+        <rdfs:subClassOf rdf:resource="http://localhost:3030/vacunacion/data#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Persona -->
+
+    <owl:Class rdf:about="http://localhost:3030/vacunacion/data#Persona"/>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Vacuna -->
+
+    <owl:Class rdf:about="http://localhost:3030/vacunacion/data#Vacuna"/>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#1_dosis -->
+
+    <owl:Class rdf:about="http://localhost:3030/vacunacion/data#1_dosis">
+        <rdfs:subClassOf rdf:resource="http://localhost:3030/vacunacion/data#Vacuna"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#2_dosis -->
+
+    <owl:Class rdf:about="http://localhost:3030/vacunacion/data#2_dosis">
+        <rdfs:subClassOf rdf:resource="http://localhost:3030/vacunacion/data#Vacuna"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Astrazeneca -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Astrazeneca">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#2_dosis"/>
+        <data1:CantidadVacunasDisponibles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50</data1:CantidadVacunasDisponibles>
+        <data1:descripcionVacuna rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edades recomendadas: 18 años o mas</data1:descripcionVacuna>
+        <data1:nombreVacuna rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Astrazeneca</data1:nombreVacuna>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Diabetes -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Diabetes">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Enfermedad_Cronica"/>
+        <data1:nombreEnfermedadCronica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diabetes Mellitus</data1:nombreEnfermedadCronica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Hipertenso -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Hipertenso">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Enfermedad_Cronica"/>
+        <data1:nombreEnfermedadCronica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hipertension</data1:nombreEnfermedadCronica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Hombre_1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Hombre_1">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Hombre"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Pfizer"/>
+        <data1:tiene_Enfermedad_Cronica rdf:resource="http://localhost:3030/vacunacion/data#Diabetes"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Incompleta</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambato</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan Cadena</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Hombre_2 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Hombre_2">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Hombre"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Astrazeneca"/>
+        <data1:tiene_Enfermedad_Cronica rdf:resource="http://localhost:3030/vacunacion/data#Hipertenso"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Completa</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuenca</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andres Garcia</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Hombre_3 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Hombre_3">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Hombre"/>
+        <data1:tiene_Enfermedad_Cronica rdf:resource="http://localhost:3030/vacunacion/data#Diabetes"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sin Vacunar</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quito</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Salazar</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Hombre_4 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Hombre_4">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Hombre"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Astrazeneca"/>
+        <data1:tiene_Enfermedad_Cronica rdf:resource="http://localhost:3030/vacunacion/data#Diabetes"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Incompleta</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latacunga</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luis Martinez</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Hombre_5 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Hombre_5">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Hombre"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Sinovac"/>
+        <data1:tiene_Enfermedad_Cronica rdf:resource="http://localhost:3030/vacunacion/data#Hipertenso"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Completa</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambato</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fernando Cruz</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Mujer_1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Mujer_1">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Mujer"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Sinovac"/>
+        <data1:tiene_Enfermedad_Cronica rdf:resource="http://localhost:3030/vacunacion/data#Diabetes"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Completa</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quito</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karla Medina</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Mujer_2 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Mujer_2">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Mujer"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Pfizer"/>
+        <data1:tiene_Enfermedad_Cronica rdf:resource="http://localhost:3030/vacunacion/data#Hipertenso"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Completa</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guayaquil</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Diaz</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Mujer_3 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Mujer_3">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Mujer"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Sinovac"/>
+        <data1:tiene_Enfermedad_Cronica rdf:resource="http://localhost:3030/vacunacion/data#Diabetes"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Incompleta</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latacunga</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veronica Hernandez</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Mujer_4 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Mujer_4">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Mujer"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Pfizer"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Completa</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quito</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sofia Carrera</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Mujer_5 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Mujer_5">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#Mujer"/>
+        <data1:se_aplica rdf:resource="http://localhost:3030/vacunacion/data#Sinovac"/>
+        <data1:NroDosisAplicadas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</data1:NroDosisAplicadas>
+        <data1:StatusVacunacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vacunación Completa</data1:StatusVacunacion>
+        <data1:deCiudad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quito</data1:deCiudad>
+        <data1:nombrePersona rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrea Acosta</data1:nombrePersona>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Pfizer -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Pfizer">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#2_dosis"/>
+        <data1:CantidadVacunasDisponibles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60</data1:CantidadVacunasDisponibles>
+        <data1:descripcionVacuna rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edad recomendada: 5 años de edad o mas</data1:descripcionVacuna>
+        <data1:nombreVacuna rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pfizer BioNTech</data1:nombreVacuna>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/vacunacion/data#Sinovac -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/vacunacion/data#Sinovac">
+        <rdf:type rdf:resource="http://localhost:3030/vacunacion/data#2_dosis"/>
+        <data1:CantidadVacunasDisponibles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200</data1:CantidadVacunasDisponibles>
+        <data1:descripcionVacuna rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edades recomendadas: 3 años o mas</data1:descripcionVacuna>
+        <data1:nombreVacuna rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sinovac</data1:nombreVacuna>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
